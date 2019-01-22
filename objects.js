@@ -1,8 +1,22 @@
-// objects and functions 
+// objects 
+var todoList = {
+  todos : ["item 1 " , "item 2" ,  "item 3", "item 4"],
+  displayTodos : function() {
+   console.log('My Todos , this.todos')
+ },
 
-var myName = { 
-    name : "Xavier", 
-    sayName:function() {
-        console.log(this)
-    }
-}
+ addTodos : function (todo) {
+   this.todos.push(todo);
+   this.displayTodos();
+ },
+
+ changeTodos : function(position , newValue) {
+   this.todos[position] = newValue; 
+   this.displayTodos()
+ },
+
+ deleteTodos: function(position) {
+ this.todos.splice(position, 1);
+ this.displayTodos();
+ }
+ };
