@@ -56,3 +56,5 @@ var todoList = {
 		this.displayTodos();
 	}
 };
+
+var displayTodosButton = document.get
